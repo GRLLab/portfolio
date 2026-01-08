@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Guillaume Rojas-Lefebvre</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">G. ROJAS-LEFEBVRE</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#experiences">Expériences</a></li>
+                    <li><a href="index.html#formations">Formations</a></li>
+                    <li><a href="projets.html" style="color:var(--accent-secondary);">Projets</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" id="theme-switcher" aria-label="Changer le thème">
+                    <i class="ph ph-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="padding-top: 150px; padding-bottom: 40px; text-align: center;">
+            <div class="container">
+                <a href="index.html" class="neo-button secondary" style="margin-bottom: 2rem;">
+                    <i class="ph ph-arrow-left"></i> Retour à l'accueil
+                </a>
+                <h1 class="hero-title">Portfolio & <span>Réalisations.</span></h1>
+                <p class="hero-subtitle" style="margin: 0 auto;">
+                    Découvrez en détail les projets sur lesquels j'ai travaillé, mes choix techniques et les solutions apportées.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="projects-grid">
+                    
+                    <!-- PROJET 1 : AROMATHÉRAPIE -->
+                    <article class="neo-box project-card">
+                        <div class="card-content">
+                            <div class="card-header-flex">
+                                <h3>Solution Web Aromathérapie</h3>
+                                <div class="project-type-icon type-code"><i class="ph ph-code"></i></div>
+                            </div>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Premier déploiement de projet</p>
+                            <div class="project-description">
+                                <p><strong>Le challenge :</strong> Une aromathérapeute professionnelle souhaitait organiser de façon plus ergonomique son stock complexe d'huiles essentielles et à suivre ses recettes (synergies) lors de déplacements.</p>
+                                <br>
+                                <p><strong>La solution :</strong> Recherche des besoins, analyse des besoins, conception d'une Web App "Mobile First". Elle permet la gestion de ses RDV & ateliers, un accès à une base de données alimentées par ses huiles (propriétés, stock, utilisations), un onglet pour générer des synergies, et une page pour les profils de ses clients.</p>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="neo-tag">JavaScript</span>
+                                <span class="neo-tag">Base de Données</span>
+                                <span class="neo-tag">UX Mobile</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/GRLLab/" target="_blank" class="neo-button" style="margin-top:1rem; width:100%;">
+                            Voir le dépôt GitHub <i class="ph ph-github-logo"></i>
+                        </a>
+                    </article>
+
+                    <!-- PROJET 2 : PORTFOLIO -->
+                    <article class="neo-box project-card">
+                        <div class="card-content">
+                            <div class="card-header-flex">
+                                <h3>Portfolio Augmenté par IA</h3>
+                                <div class="project-type-icon type-hybrid"><i class="ph ph-sparkle"></i></div>
+                            </div>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Productivité & Innovation</p>
+                            <div class="project-description">
+                                <p><strong>L'objectif :</strong> Créer un site vitrine performant et stylé (Néo-brutalisme) en un temps record pour démontrer une maîtrise des outils modernes.</p>
+                                <br>
+                                <p><strong>Méthodologie :</strong> Pair-programming avec une IA Générative. Utilisation de prompts itératifs pour affiner le design, générer le code HTML/CSS propre et implémenter le mode sombre.</p>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="neo-tag">Prompt Engineering</span>
+                                <span class="neo-tag">HTML5 / CSS3</span>
+                                <span class="neo-tag">GitHub Pages</span>
+                            </div>
+                        </div>
+                        <div class="neo-button secondary" style="margin-top:1rem; width:100%; cursor: default;">
+                            Projet Actuel
+                        </div>
+                    </article>
+
+                    <!-- PROJET 3 : CFPS -->
+                    <article class="neo-box project-card">
+                        <div class="card-content">
+                            <div class="card-header-flex">
+                                <h3>Gestion & Projets CFPS</h3>
+                                <div class="project-type-icon type-code"><i class="ph ph-code"></i></div>
+                            </div>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Organisation & Méthodologie + Refonte du Site web</p>
+                            <div class="project-description">
+                                <p><strong>Le constat :</strong> Organisation complexe des colloques/formations nécessitant une méthodologie métier dédiée. Fin du support externe du site web → arbitrage autonomie vs WordPress.</p>
+                                <br>
+                                <p><strong>L'objectif :</strong> Remplacer Excel par outils fluides pour colloques/planification. Proposition CMS Strapi from scratch pour le site.</p>
+                                <br>
+                                <p><strong>La solution :</strong> 2 prototypes apps web développés. Choix final : WordPress pour le site CFPS.</p>
+                            </div>
+                        </div>
+                        <div class="neo-button secondary" style="margin-top:1rem; width:100%; cursor: default;">
+                            En savoir plus
+                        </div>
+                    </article>
+
+                    <!-- PROJET 4 : MAQUETTES -->
+                    <article class="neo-box project-card">
+                        <div class="card-content">
+                            <div class="card-header-flex">
+                                <h3>Maquettes & Prototypage</h3>
+                                <div class="project-type-icon type-design"><i class="ph ph-paint-brush"></i></div>
+                            </div>
+                            <div class="project-description">
+                                <p>Série de prototypes haute-fidélité réalisés dans le cadre de ma formation Studi. Création de parcours utilisateurs pour des sites e-commerce et des dashboards administratifs.</p>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="neo-tag">Figma</span>
+                                <span class="neo-tag">Adobe XD</span>
+                                <span class="neo-tag">Wireframing</span>
+                            </div>
+                        </div>
+                         <a href="#" class="neo-button secondary" style="margin-top:1rem; width:100%;">Voir sur Behance</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 3px solid var(--border-color); margin-top: 4rem;">
+        <p>&copy; 2025 Guillaume Rojas-Lefebvre. Conçu et développé en collaboration avec une IA.</p>
+    </footer>
+
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const icon = themeSwitcher.querySelector('i');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) { document.documentElement.setAttribute('data-theme', currentTheme); updateIcon(currentTheme); }
+
+        themeSwitcher.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if(theme === 'dark') { icon.classList.remove('ph-sun'); icon.classList.add('ph-moon'); } 
+            else { icon.classList.remove('ph-moon'); icon.classList.add('ph-sun'); }
+        }
+    </script>
+</body>
+</html>
