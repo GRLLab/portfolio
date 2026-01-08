@@ -149,7 +149,8 @@
     
 <div id="toast">🚧 Projet en cours de déploiement ! <br>Lien bientôt disponible.</div>
     
-    <script>
+<script>
+        // --- GESTION DU THÈME (Votre code existant) ---
         const themeSwitcher = document.getElementById('theme-switcher');
         const icon = themeSwitcher.querySelector('i');
         const currentTheme = localStorage.getItem('theme');
@@ -166,6 +167,32 @@
         function updateIcon(theme) {
             if(theme === 'dark') { icon.classList.remove('ph-sun'); icon.classList.add('ph-moon'); } 
             else { icon.classList.remove('ph-moon'); icon.classList.add('ph-sun'); }
+        }
+
+        // --- GESTION DES LIENS EN PRÉPARATION (Nouveau code) ---
+        
+        // 1. On sélectionne tous les éléments avec la classe 'wip-link'
+        const wipLinks = document.querySelectorAll('.wip-link');
+        const toast = document.getElementById("toast");
+
+        wipLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Empêche le lien de s'ouvrir
+                e.preventDefault(); 
+                
+                // Affiche le message
+                showToast();
+            });
+        });
+
+        function showToast() {
+            // Ajoute la classe qui rend visible
+            toast.className = "show";
+            
+            // Enlève la classe après 3 secondes (3000ms)
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
         }
     </script>
 </body>
