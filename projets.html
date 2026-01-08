@@ -10,6 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Notification style Néo-brutaliste */
+        #toast {
+            visibility: hidden;
+            min-width: 280px;
+            background-color: var(--bg-color); /* S'adapte au thème clair/sombre */
+            color: var(--text-color);
+            text-align: center;
+            border: 3px solid var(--text-color);
+            box-shadow: 6px 6px 0px var(--text-color); /* Ombre dure */
+            padding: 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-family: 'Lexend', sans-serif;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+
+        /* Classe active */
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        /* Curseur main pour les div qui agissent comme boutons */
+        .wip-link {
+            cursor: pointer !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -49,7 +84,6 @@
             <div class="container">
                 <div class="projects-grid">
                     
-                    <!-- PROJET 1 : AROMATHÉRAPIE -->
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
@@ -68,12 +102,11 @@
                                 <span class="neo-tag">UX Mobile</span>
                             </div>
                         </div>
-                        <a href="https://github.com/GRLLab/" target="_blank" class="neo-button wip-link" style="...">
-                        Voir le dépôt GitHub <i class="ph ph-github-logo"></i>
+                        <a href="https://github.com/GRLLab/" target="_blank" class="neo-button wip-link" style="margin-top:1rem; width:100%;">
+                            Voir le dépôt GitHub <i class="ph ph-github-logo"></i>
                         </a>
                     </article>
 
-                    <!-- PROJET 2 : PORTFOLIO -->
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
@@ -92,12 +125,11 @@
                                 <span class="neo-tag">GitHub Pages</span>
                             </div>
                         </div>
-                        <div class="neo-button secondary wip-link" style="margin-top:1rem; width:100%; cursor: default;">
+                        <div class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">
                             Projet Actuel
                         </div>
                     </article>
 
-                    <!-- PROJET 3 : CFPS -->
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
@@ -113,12 +145,11 @@
                                 <p><strong>La solution :</strong> 2 prototypes apps web développés. Choix final : WordPress pour le site CFPS.</p>
                             </div>
                         </div>
-                        <div class="neo-button secondary wip-link" style="margin-top:1rem; width:100%; cursor: default;">
+                        <div class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">
                             En savoir plus
                         </div>
                     </article>
 
-                    <!-- PROJET 4 : MAQUETTES -->
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
@@ -146,11 +177,14 @@
     <footer style="text-align: center; padding: 2rem; border-top: 3px solid var(--border-color); margin-top: 4rem;">
         <p>&copy; 2025 Guillaume Rojas-Lefebvre. Conçu et développé en collaboration avec une IA.</p>
     </footer>
-    
-<div id="toast">🚧 Projet en cours de déploiement ! <br>Lien bientôt disponible.</div>
-    
-<script>
-        // --- GESTION DU THÈME (Votre code existant) ---
+
+    <div id="toast">
+        🚧 Projet en cours de déploiement ! <br>
+        <span style="font-weight:400; font-size: 0.9em;">Lien bientôt disponible.</span>
+    </div>
+
+    <script>
+        // --- GESTION DU THÈME ---
         const themeSwitcher = document.getElementById('theme-switcher');
         const icon = themeSwitcher.querySelector('i');
         const currentTheme = localStorage.getItem('theme');
@@ -169,27 +203,20 @@
             else { icon.classList.remove('ph-moon'); icon.classList.add('ph-sun'); }
         }
 
-        // --- GESTION DES LIENS EN PRÉPARATION (Nouveau code) ---
-        
-        // 1. On sélectionne tous les éléments avec la classe 'wip-link'
+        // --- GESTION DES LIENS EN TRAVAUX ---
         const wipLinks = document.querySelectorAll('.wip-link');
         const toast = document.getElementById("toast");
 
         wipLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Empêche le lien de s'ouvrir
-                e.preventDefault(); 
-                
-                // Affiche le message
-                showToast();
+                e.preventDefault(); // Empêche le clic
+                showToast();        // Affiche le message
             });
         });
 
         function showToast() {
-            // Ajoute la classe qui rend visible
             toast.className = "show";
-            
-            // Enlève la classe après 3 secondes (3000ms)
+            // Disparait après 3 secondes
             setTimeout(function(){ 
                 toast.className = toast.className.replace("show", ""); 
             }, 3000);
