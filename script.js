@@ -22,5 +22,6 @@
         function showNotification(message) {
             const notif = document.getElementById('notification');
             notif.textContent = message; notif.classList.add('show');
-            setTimeout(() => { notif.classList.remove('show'); }, 3000);
+            setTimeout(() => { notif.classList.remove('show'); }, 2000);
         }
+        

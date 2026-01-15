@@ -12,15 +12,14 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Notification style Néo-brutaliste */
         #toast {
             visibility: hidden;
             min-width: 280px;
-            background-color: var(--bg-color); /* S'adapte au thème clair/sombre */
+            background-color: var(--bg-color);
             color: var(--text-color);
             text-align: center;
             border: 3px solid var(--text-color);
-            box-shadow: 6px 6px 0px var(--text-color); /* Ombre dure */
+            box-shadow: 6px 6px 0px var(--text-color);
             padding: 16px;
             position: fixed;
             z-index: 1000;
@@ -33,14 +32,12 @@
             transition: opacity 0.3s, bottom 0.3s;
         }
 
-        /* Classe active */
         #toast.show {
             visibility: visible;
             opacity: 1;
             bottom: 50px;
         }
 
-        /* Curseur main pour les div qui agissent comme boutons */
         .wip-link {
             cursor: pointer !important;
         }
@@ -50,7 +47,7 @@
 
     <header>
         <div class="container">
-            <a href="index.html" class="logo">G. ROJAS-LEFEBVRE</a>
+            <a href="index.html" class="logo">GUILLAUME ROJAS-LEFEBVRE</a>
             <nav>
                 <ul>
                     <li><a href="index.html#experiences">Expériences</a></li>
@@ -103,30 +100,30 @@
                             </div>
                         </div>
                         <a href="https://github.com/GRLLab/" target="_blank" class="neo-button wip-link" style="margin-top:1rem; width:100%;">
-                            Voir le dépôt GitHub <i class="ph ph-github-logo"></i>
+                            dépôt GitHub <i class="ph ph-github-logo"></i>
                         </a>
                     </article>
 
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
-                                <h3>Portfolio Augmenté par IA</h3>
+                                <h3>Portfolio - site personnel</h3>
                                 <div class="project-type-icon type-hybrid"><i class="ph ph-sparkle"></i></div>
                             </div>
-                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Productivité & Innovation</p>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Portfolio personnel & identité numérique</p>
                             <div class="project-description">
-                                <p><strong>L'objectif :</strong> Créer un site vitrine performant et stylé (Néo-brutalisme) en un temps record pour démontrer une maîtrise des outils modernes.</p>
+                                <p><strong>L'objectif :</strong> Créer un site vitrine performant et stylé (Néo-brutalisme) responsive. Focus sur l'optimisation de <strong>l'expérience utilisateur (UX)</strong>.</p>
                                 <br>
-                                <p><strong>Méthodologie :</strong> Pair-programming avec une IA Générative. Utilisation de prompts itératifs pour affiner le design, générer le code HTML/CSS propre et implémenter le mode sombre.</p>
+                                <p><strong>Méthodologie :</strong> Utilisation de prompts itératifs pour affiner le design, générer le code HTML/CSS propre et implémenter le mode sombre.</p>
                             </div>
                             <div class="tech-tags">
-                                <span class="neo-tag">Prompt Engineering</span>
+                                <span class="neo-tag">Prompt Engineering </span>
                                 <span class="neo-tag">HTML5 / CSS3</span>
-                                <span class="neo-tag">GitHub Pages</span>
+                                <span class="neo-tag">Optimisation workflow</span>
                             </div>
                         </div>
                         <div class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">
-                            Projet Actuel
+                            Vous y êtes :)
                         </div>
                     </article>
 
@@ -153,21 +150,56 @@
                     <article class="neo-box project-card">
                         <div class="card-content">
                             <div class="card-header-flex">
-                                <h3>Maquettes & Prototypage</h3>
+                                <h3>Projets - Validation du Bachelor</h3>
                                 <div class="project-type-icon type-design"><i class="ph ph-paint-brush"></i></div>
                             </div>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Formation Chef de projet digital</p>                            
                             <div class="project-description">
-                                <p>Série de prototypes haute-fidélité réalisés dans le cadre de ma formation Studi. Création de parcours utilisateurs pour des sites e-commerce et des dashboards administratifs.</p>
+                                <p>Série de projets réalisés dans le cadre de ma formation Studi :
+                                    <ul>
+                                        <br>
+                                        <li><i class="ph ph-game-controller"></i> Site vitrine pour société <strong>Hardware Custom</strong> (customisation de consoles de jeux vidéo)</li>
+                                        <li><i class="ph ph-house"></i> Redesign de la charte graphique de l'assurance habitation <strong>Lemonade</strong></li>
+                                        <li><i class="ph ph-confetti"></i> Renouvellement de l'identité visuelle de <strong>You Make a Wish</strong> (agence d'événementiel)</li>
+                                    </ul>
+                                </p>
                             </div>
                             <div class="tech-tags">
-                                <span class="neo-tag">Figma</span>
-                                <span class="neo-tag">Adobe XD</span>
-                                <span class="neo-tag">Wireframing</span>
+                                <span class="neo-tag">Adobe Illustrator & Photoshop</span>
+                                <span class="neo-tag">Adobe Premiere Pro & After Effects</span>
+                                <span class="neo-tag">HTML5/CSS3</span>
                             </div>
                         </div>
-                         <a href="#" class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">Voir sur Behance</a>
+                         <a href="#" class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">Voir sur Github</a>
                     </article>
-
+                    <article class="neo-box project-card">
+                        <div class="card-content">
+                            <div class="card-header-flex">
+                                <h3>Projets personnels</h3>
+                                <div class="project-type-icon type-design"><i class="ph ph-paint-brush"></i></div>
+                            </div>
+                            <p style="margin-bottom: 1rem; color: var(--accent-secondary); font-weight:700;">Expérience dans le domaine de la création de projet</p>                            
+                            <div class="project-description">
+                                <p>Projets réalisés à titre personnel/comme chef de projet en devenir :
+                                    <ul>
+                                        <br>
+                                        <li><i class="ph ph-plant"></i> Déploiement de divers projets autour de l'<strong>aromathérapie</strong> : UI Kit, icônes, livret de recettes du quotidien etc.</li>
+                                        <li><i class="ph ph-sneaker-move"></i> Élaboration d'un logotype pour l'association <strong>Les Domoizelles</strong></li>
+                                        <li><i class="ph ph-graduation-cap"></i> Création de posters à but <strong>éducatifs</strong></li>
+                                        <li><i class="ph ph-coffee"></i> Création de l'identité visuelle d'un <strong>coffee shop</strong></li>
+                                        <li><i class="ph ph-flower"></i> Création d'un kit d'<strong>icônes</strong> pour Instagram : Thème floral</li>
+                                        <li><i class="ph ph-twitch-logo"></i> Création d'un kit de <strong>streaming</strong> pour Twitch : Icônes, overlay, bandeaux, image de profil, scènes de transition</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="neo-tag">Adobe Illustrator & Photoshop</span>
+                                <span class="neo-tag">Adobe Premiere Pro & After Effects</span>
+                                <span class="neo-tag">Canva</span>
+                            </div>
+                        </div>
+                         <a href="#" class="neo-button secondary wip-link" style="margin-top:1rem; width:100%;">Plus d'informations</a>
+                    </article>
                 </div>
             </div>
         </section>
@@ -175,52 +207,47 @@
     </main>
 
     <footer style="text-align: center; padding: 2rem; border-top: 3px solid var(--border-color); margin-top: 4rem;">
-        <p>&copy; 2025 Guillaume Rojas-Lefebvre. Conçu et développé en collaboration avec une IA.</p>
+        <p>&copy; 2025 Guillaume Rojas-Lefebvre. </p>
+        <p><strong>Fait avec <i class="ph ph-heart"></i>, optimisé avec l'IA.</strong></p>
+        <i class="ph ph-gavel"></i> <a href="mentions.html" style="text-decoration: none; color: inherit;">Mentions Légales & Confidentialité</a>
     </footer>
 
-    <div id="toast">
+<div id="toast">
         🚧 Projet en cours de déploiement ! <br>
         <span style="font-weight:400; font-size: 0.9em;">Lien bientôt disponible.</span>
     </div>
 
     <script>
-        // --- GESTION DU THÈME ---
-        const themeSwitcher = document.getElementById('theme-switcher');
-        const icon = themeSwitcher.querySelector('i');
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) { document.documentElement.setAttribute('data-theme', currentTheme); updateIcon(currentTheme); }
-
-        themeSwitcher.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            let newTheme = theme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
-        });
-
-        function updateIcon(theme) {
-            if(theme === 'dark') { icon.classList.remove('ph-sun'); icon.classList.add('ph-moon'); } 
-            else { icon.classList.remove('ph-moon'); icon.classList.add('ph-sun'); }
-        }
-
-        // --- GESTION DES LIENS EN TRAVAUX ---
+        // Sélectionne tous les éléments avec la classe .wip-link
         const wipLinks = document.querySelectorAll('.wip-link');
-        const toast = document.getElementById("toast");
+        const toast = document.getElementById('toast');
 
-        wipLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Empêche le clic
-                showToast();        // Affiche le message
-            });
-        });
-
-        function showToast() {
-            toast.className = "show";
-            // Disparait après 3 secondes
-            setTimeout(function(){ 
-                toast.className = toast.className.replace("show", ""); 
+        // Fonction pour afficher le toast
+        function showToast(e) {
+            // Si le lien est un vrai lien (comme GitHub), on ne fait rien (on laisse cliquer)
+            if (this.getAttribute('href') && this.getAttribute('href') !== '#' && !this.getAttribute('href').startsWith('javascript')) {
+                return;
+            }
+            
+            // Sinon, on bloque le clic et on affiche le toast
+            e.preventDefault();
+            toast.classList.add('show');
+            
+            // Cache le toast après 3 secondes
+            setTimeout(() => {
+                toast.classList.remove('show');
             }, 3000);
         }
+
+        // Ajoute l'écouteur d'événement sur chaque lien WIP
+        wipLinks.forEach(link => {
+            link.addEventListener('click', showToast);
+        });
     </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 </body>
 </html>

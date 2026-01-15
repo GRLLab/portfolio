@@ -78,32 +78,6 @@ ul {
     transition: all 0.2s ease;
 }
 
-#toast {
-    visibility: hidden; /* Caché par défaut */
-    min-width: 250px;
-    background-color: var(--bg-color); /* S'adapte au thème */
-    color: var(--text-color);
-    text-align: center;
-    border: 3px solid var(--text-color);
-    box-shadow: 4px 4px 0px var(--text-color);
-    border-radius: 0; /* Néo-brutalisme : pas d'arrondi ou peu */
-    padding: 16px;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-    font-family: 'Lexend', sans-serif;
-    font-weight: 500;
-    opacity: 0;
-    transition: opacity 0.3s, bottom 0.3s;
-}
-
-#toast.show {
-    visibility: visible;
-    opacity: 1;
-    bottom: 50px;
-}
 .neo-button {
     display: inline-flex;
     align-items: center;

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guillaume Rojas-Lefebvre | Portfolio</title>
+    <title>Guillaume Rojas-Lefebvre | Chef de Projet Digital & Retail</title>
+    <meta name="description" content="Portfolio de Guillaume Rojas-Lefebvre. 8 ans d'expérience en management (Free, CHU) et gestion de projet digital. Découvrez mes réalisations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grlportfolio.netlify.app/">
+    <meta property="og:title" content="Guillaume Rojas-Lefebvre - Portfolio">
+    <meta property="og:description" content="Chef de Projet Digital & Expert Retail. Manager de terrain avec 8 ans d'expérience. Découvrez mes projets.">
+    <meta property="og:image" content="https://grlportfolio.netlify.app/images/social-card.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://grlportfolio.netlify.app/">
+    <meta property="twitter:title" content="Guillaume Rojas-Lefebvre - Portfolio">
+    <meta property="twitter:description" content="Chef de Projet Digital & Expert Retail. Découvrez mes réalisations.">
+    <meta property="twitter:image" content="https://grlportfolio.netlify.app/images/social-card.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
-    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <div class="logo">GUILLAUME ROJAS-LEFEBVRE</div>
+            <div class="logo"><a href="index.html">GUILLAUME ROJAS-LEFEBVRE</a></div>
             <nav>
                 <ul>
                     <li><a href="#experiences">Expériences</a></li>
@@ -204,41 +214,55 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact">
-            <div class="container">
-                <h2>Me Contacter</h2>
-                <div class="contact-layout">
-                    <div class="contact-cards">
-                        <div class="copy-card" onclick="copyToClipboard('Rojaslefebvre.guillaume@gmail.com', 'Email copié !')">
-                            <div><i class="ph ph-envelope-simple" style="font-size:1.5rem; margin-right:0.5rem;"></i><strong>Email</strong></div>
-                            <span>Rojaslefebvre.guillaume@gmail.com</span>
-                        </div>
-                        <div class="copy-card" onclick="copyToClipboard('0782528101', 'Numéro copié !')">
-                            <div><i class="ph ph-phone" style="font-size:1.5rem; margin-right:0.5rem;"></i><strong>Tél</strong></div>
-                            <span>07.82.52.81.01</span>
-                        </div>
+<section id="contact">
+    <div class="container">
+        <h2>Me Contacter</h2>
+        <div class="contact-layout">
+            <div class="contact-cards">
+                <a href="mailto:rojaslefebvre.guillaume@gmail.com" class="copy-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+                    <div>
+                        <i class="ph ph-envelope-simple" style="font-size:1.5rem; margin-right:0.5rem;"></i>
+                        <strong>Email</strong>
                     </div>
+                    <span style="font-size: 0.9rem;">Envoyer un email</span>
+                </a>
 
-                    <form class="neo-box" onsubmit="event.preventDefault(); showNotification('Message envoyé (Simulation)');">
-                        <label class="form-label">Nom</label><input type="text" class="form-input" required>
-                        <label class="form-label">Email</label><input type="email" class="form-input" required>
-                        <label class="form-label">Message</label><textarea rows="4" class="form-textarea" required></textarea>
-                        <button type="submit" class="neo-button" style="width:100%;">Envoyer</button>
-                    </form>
-                </div>
+                <a href="tel:+33782528101" class="copy-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+                    <div>
+                        <i class="ph ph-phone" style="font-size:1.5rem; margin-right:0.5rem;"></i>
+                        <strong>Tél</strong>
+                    </div>
+                    <span style="font-size: 0.9rem;">Cliquez ici</span>
+                </a>
             </div>
-        </section>
+
+            <form class="neo-box" name="contact" method="POST" netlify action="merci.html">
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <label class="form-label" for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" class="form-input" required>
+                
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-textarea" required></textarea>
+                
+                <button type="submit" class="neo-button" style="width:100%; margin-top: 1rem;">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</section>
 
     </main>
 
     <footer style="text-align: center; padding: 2rem; border-top: 3px solid var(--border-color); margin-top: 4rem;">
-        <p>&copy; 2025 Guillaume Rojas-Lefebvre.                 <div class="ai-badge">
-                    <i class="ph ph-sparkle"></i> Workflow optimisé par IA
-                </div></p>
+        <p>&copy; 2025 Guillaume Rojas-Lefebvre. </p>
+        <p><strong>Fait avec <i class="ph ph-heart"></i>, optimisé avec l'IA.</strong></p>
+        <i class="ph ph-gavel"></i> <a href="mentions.html" style="text-decoration: none; color: inherit;">Mentions Légales & Confidentialité</a>
     </footer>
 
     <div id="notification" class="notification">Texte de notification</div>
-
-
+<script src="script.js"></script>
 </body>
 </html>
